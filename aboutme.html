@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>About Me</title>
+        <style>
+            .listitem {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>About Me</h1>
+        <ul>
+            <li>Nickname: <span id="nickname"></span></li>
+            <li>Favorites: <span id="favorites"></span></li>
+            <li>Hometown: <span id="hometown"></span></li>
+        </ul>
+        <script>
+            document.body.style.fontFamily = 'Arial, sans-serif';
+            document.querySelector('#nickname').textContent = "Le Chi Ron";
+            document.querySelector('#favorites').textContent = "Travel";
+            document.querySelector('#hometown').textContent  = "Quang Tri";
+            var items = document.querySelectorAll('li');
+            for (var i=0; i < items.length; i++) {
+                items[i].className = 'listitem';
+            }
+            var img = document.createElement('img');
+            img.src = './my-pic.jpg';
+            img.width = 400;
+            document.body.appendChild(img);
+        </script>
+    </body>
+</html>
